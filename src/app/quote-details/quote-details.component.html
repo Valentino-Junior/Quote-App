@@ -1,16 +1,15 @@
-
-
-<p style="background-color: brown; display: inline-block;">{{quotee.postDate| date}}</p>
+<!-- <p style="background-color: brown; display: inline-block;">{{postedDate| date}}</p> -->
 <p>
-  Posted: {{quotee.postDate|date| durationCount}} ago
+    Posted: {{quotee.postedDate|date| durationCount}} days ago
 </p>
 
 
-
-<button (click) = "upVote()" type="submit" class="btn btn-outline-success" style="margin-right:10px ;">Upvote</button>
+<!-- upvote and downVote button -->
+<button (click)="upVote()" type="submit" class="btn btn-outline-success" style="margin-right:10px ;">Upvote</button>
 {{upvote}}
-<button (click)= "downVote()" type="submit" class="btn btn-outline-danger" style="margin-right: 10px;">Downvote</button>
-{{downvote}} 
+<button (click)="downVote()" type="submit" class="btn btn-outline-danger" style="margin-right: 10px;">Downvote</button>
+{{downvote}}
 <br><br>
 
-<button (click) = "deleteMain(true)" type="submit" class="btn btn-danger">Delete</button>
+<!-- delete button -->
+<button (click)="deleteMain(true)" type="submit" class="btn btn-danger">Delete</button>

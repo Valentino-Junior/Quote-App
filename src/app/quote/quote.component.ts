@@ -23,7 +23,7 @@ export class QuoteComponent implements OnInit {
     this.QuoteClassess[index].showQuotes = !this.QuoteClassess[index].showQuotes;
   }
 
-  submitToParent(QuoteClasse: QuoteClass) {
+  submitToParent(QuoteClasse:any) {
  let QuoteClasseLength = this.QuoteClassess.length;
  QuoteClasse.id = QuoteClasseLength+1;
  QuoteClasse.postDate = new Date(QuoteClasse.postDate);

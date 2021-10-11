@@ -1,30 +1,30 @@
-<h1  class="text-center">VALOR INSPIRATIONAL QUOTES</h1>
+<h1 class="text-center">VALOR INSPIRATIONAL QUOTES</h1>
 
 <hr>
 
 <div class="container">
-<div class="row">
-    <div class="col-md-3">
+    <div class="row">
+        <div class="col-md-3">
 
-        <ul>
-            <div *ngFor='let QuoteClasse of QuoteClassess;let i = index'>
-                <li><b>{{QuoteClasse.author}}</b></li>
-                <hr>
-                <li>{{QuoteClasse.quote}}</li>
-                <small><li> Posted by: <b>{{QuoteClasse.postedBy}}</b></li></small>
+            <ul>
+                <div *ngFor='let QuoteClasse of QuoteClassess;let i = index'>
+                    <li style="font-size: x-large;"><b>{{QuoteClasse.author}}</b></li>
+                    <hr>
+                    <li>{{QuoteClasse.quote}}</li>
+                    <small>
+                        <li> Posted by: <b>{{QuoteClasse.postedBy}}</b></li>
+                    </small>
 
 
-                <button class=" btn btn-success" (click)='toggleDetails(i)'>More info</button><br><br><br>
-                <app-quote-details *ngIf='QuoteClasse.showQuotes' [quoteSend]='QuoteClasse' (event) = "eraseQuote($event,i)"></app-quote-details>
-            </div>
-        </ul>
-        <p *ngIf='QuoteClassess.length == 0'>You have too many goals</p>
-    </div>
-    <div class="col-md-8">
-        <app-quote-form (event) = 'submitToParent($event)'></app-quote-form>
+                    <button class=" btn btn-success" (click)='toggleDetails(i)'>More info</button><br><br>
+                    <app-quote-details *ngIf='QuoteClasse.showQuotes' [quoteSend]='QuoteClasse'
+                        (event)="eraseQuote($event,i)"></app-quote-details>
+                </div>
+            </ul>
+            <p *ngIf='QuoteClassess.length == 0'>You have too many goals</p>
+        </div>
+        <div class="col-md-8">
+            <app-quote-form (event)='submitToParent($event)'></app-quote-form>
+        </div>
     </div>
 </div>
-</div>
-
-
-
