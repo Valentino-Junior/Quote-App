@@ -1,21 +1,30 @@
 <div class="container-fluid text-black">
     <h2 class="text-center">Upload Quote</h2>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-      <div class="form-group">
-        <label for="author">Author</label>
-        <input type="text"  class="form-control"  name = "author" [(ngModel)] = "newquoteClass.author" required>
-      
-      </div>
-      <div class="form-group">
-        <label for="quote">Quote</label>
-        <textarea class="form-control"  rows="6" cols="80" name="quote" [(ngModel)] = "newquoteClass.quote"required></textarea>
-       
-      </div>
-      <div class="form-group">
-        <label for="posted">Posted by:</label>
-        <input type="text" class="form-control" name="posted"  [(ngModel)] = "newquoteClass.postedBy"required>
-        
-      </div><br>
-      <button type="submit"class="btn btn-success w-25">Upload Quote</button>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" class="form-control w-50" name="author" [(ngModel)]="newquoteClass.author"
+                #author='ngModel' required>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Author name is required</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="quote">Quote</label>
+            <textarea class="form-control" rows="6" cols="80" name="quote" [(ngModel)]="newquoteClass.quote"
+                #quote="ngModel" required></textarea>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                <p> Quote is required</p>
+            </div>
+        </div>
+        <div class=" form-group">
+            <label for="posted">Posted by:</label>
+            <input type="text" class="form-control w-50" name="posted" [(ngModel)]="newquoteClass.postedBy"
+                #postedBy="ngModel" required>
+            <div [hidden]="postedBy.valid || postedBy.pristine" class="alert alert-danger">
+                <p>Name of the person posting the quote is required</p>
+            </div>
+        </div><br>
+        <button type="submit" class="btn btn-success w-25">Upload Quote</button>
     </form>
-  </div>
+</div>
