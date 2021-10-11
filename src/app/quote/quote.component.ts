@@ -17,8 +17,17 @@ export class QuoteComponent implements OnInit {
  
   ];
   
+
+
   toggleDetails(index:any){
     this.QuoteClassess[index].showQuotes = !this.QuoteClassess[index].showQuotes;
+  }
+
+  submitToParent(QuoteClasse: QuoteClass) {
+ let QuoteClasseLength = this.QuoteClassess.length;
+ QuoteClasse.id = QuoteClasseLength+1;
+ QuoteClasse.postDate = new Date(QuoteClasse.postDate);
+ this.QuoteClassess.push(QuoteClasse)
   }
 
 
