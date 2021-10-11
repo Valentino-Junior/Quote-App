@@ -3,3 +3,9 @@
 ul{
     list-style-type: none;
 }
+.formo{
+    background-image:url(./assets/inspire4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
