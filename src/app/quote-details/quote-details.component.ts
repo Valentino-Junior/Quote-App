@@ -1,4 +1,5 @@
 import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
+import { QuoteClass } from '../quote-class';
 
 
 @Component({
@@ -7,8 +8,15 @@ import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
+  @Input() quoteSend!:QuoteClass; 
+  @Output() event: EventEmitter<any> = new EventEmitter();
 
-  
+  public quotee =  new QuoteClass (0, '','', '', new Date ())
+
+  sendData() {
+
+    this.event.emit(this.quotee);
+  }
 
   constructor() { }
 

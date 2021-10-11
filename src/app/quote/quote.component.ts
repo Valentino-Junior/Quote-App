@@ -16,6 +16,11 @@ export class QuoteComponent implements OnInit {
     new QuoteClass (4, 'Robson Walton', 'I learned from my dad that change and experimentation are constants and important. You have to keep trying new things.', 'Dentox Amerigo',new Date(2023,6,12)),
  
   ];
+  
+  toggleDetails(index:any){
+    this.QuoteClassess[index].showQuotes = !this.QuoteClassess[index].showQuotes;
+  }
+
 
   ngOnInit(): void {
   }

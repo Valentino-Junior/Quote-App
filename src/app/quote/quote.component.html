@@ -9,9 +9,9 @@
             <div *ngFor='let QuoteClasse of QuoteClassess;let i = index'>
                 <li>{{QuoteClasse.author}}</li>
                 <button (click)='toggleDetails(i)'>More info</button>
-                <!-- <app-quote-details *ngIf='goal.showDescription' [goal]='goal'></app-quote-details> -->
+                <app-quote-details *ngIf='QuoteClasse.showQuotes' [quoteSend]='QuoteClasse'></app-quote-details>
             </div>
         </ul>
-        <p *ngIf='goals.length == 0'>You have too many goals</p>
+        <p *ngIf='QuoteClassess.length == 0'>You have too many goals</p>
     </div>
 </div>

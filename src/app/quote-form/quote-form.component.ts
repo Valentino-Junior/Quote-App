@@ -1,4 +1,4 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-quote-form',
@@ -7,13 +7,13 @@ import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 })
 export class QuoteFormComponent implements OnInit {
 
-  @Output() event:EventEmitter<any> = new EventEmitter();
-  
-  public data = {name:'vale', age:23}
-sendData() {
+  @Output() event: EventEmitter<any> = new EventEmitter();
 
-  this.event.emit(this.data);
-}
+  public data = { name: 'vale', age: 23 }
+  sendData() {
+
+    this.event.emit(this.data);
+  }
 
   constructor() { }
 
