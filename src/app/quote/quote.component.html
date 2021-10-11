@@ -1,4 +1,4 @@
-<h1>VALOR INSPIRATIONAL QUOTES</h1>
+<h1  class="text-center">VALOR INSPIRATIONAL QUOTES</h1>
 
 <hr>
 
@@ -11,8 +11,10 @@
                 <li><b>{{QuoteClasse.author}}</b></li>
                 <hr>
                 <li>{{QuoteClasse.quote}}</li>
+                <small><li> Posted by: <b>{{QuoteClasse.postedBy}}</b></li></small>
 
-                <button class=" btn btn-success" (click)='toggleDetails(i)'>More info</button>
+
+                <button class=" btn btn-success" (click)='toggleDetails(i)'>More info</button><br><br><br>
                 <app-quote-details *ngIf='QuoteClasse.showQuotes' [quoteSend]='QuoteClasse'></app-quote-details>
             </div>
         </ul>

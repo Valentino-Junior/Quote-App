@@ -14,11 +14,13 @@ export class QuoteDetailsComponent implements OnInit {
   public QuoteClasse:any;
 
   public quotee =  new QuoteClass (0, '','', '', new Date ())
+public postedBy!:string;
+  // sendData() {
 
-  sendData() {
+    // this.event.emit(this.quotee);
+  // }
 
-    this.event.emit(this.quotee);
-  }
+  
 
   constructor() { }
 
