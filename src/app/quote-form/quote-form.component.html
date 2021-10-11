@@ -5,7 +5,7 @@
         <div class="form-group">
             <label for="author">Author</label>
             <input type="text" class="form-control w-50" name="author" [(ngModel)]="newquoteClass.author"
-                #author='ngModel' required>
+                #author='ngModel' required style="background-color: transparent;">
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                 <p>Author name is required</p>
             </div>
@@ -13,7 +13,7 @@
         <div class="form-group">
             <label for="quote">Quote</label>
             <textarea class="form-control" rows="6" cols="80" name="quote" [(ngModel)]="newquoteClass.quote"
-                #quote="ngModel" required></textarea>
+                #quote="ngModel" required style="background-color: transparent;"></textarea>
             <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
                 <p> Quote is required</p>
             </div>
@@ -21,7 +21,7 @@
         <div class=" form-group">
             <label for="posted">Posted by:</label>
             <input type="text" class="form-control w-50" name="posted" [(ngModel)]="newquoteClass.postedBy"
-                #postedBy="ngModel" required>
+                #postedBy="ngModel" required style="background-color: transparent;">
             <div [hidden]="postedBy.valid || postedBy.pristine" class="alert alert-danger">
                 <p>Name of the person posting the quote is required</p>
             </div>
