@@ -22,11 +22,11 @@ public postedBy!:string;
 upvote:number =0
 downvote:number =0
   upVote() {
-this.upvote+=1
+this.upvote++
   }
 
   downVote() {
-    this.downvote+=1
+    this.downvote++
       }
 
   constructor() { }
