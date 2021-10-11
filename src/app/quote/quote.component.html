@@ -1,3 +1,17 @@
-
 <h1>VALOR INSPIRATIONAL QUOTES</h1>
 
+<hr>
+
+<div class="row">
+    <div class="col-md-3">
+
+        <ul>
+            <div *ngFor='let QuoteClasse of QuoteClassess;let i = index'>
+                <li>{{QuoteClasse.author}}</li>
+                <button (click)='toggleDetails(i)'>More info</button>
+                <!-- <app-quote-details *ngIf='goal.showDescription' [goal]='goal'></app-quote-details> -->
+            </div>
+        </ul>
+        <p *ngIf='goals.length == 0'>You have too many goals</p>
+    </div>
+</div>
