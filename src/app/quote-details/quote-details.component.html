@@ -5,3 +5,9 @@
   Posted: {{quotee.postDate|date| durationCount}} ago
 </p>
 
+
+<i class="fas fa-thumbs-up fa-2x thumb-up"></i>
+<button (click) = "upVote()" type="submit">Upvote</button>
+{{upvote}}
+<button (click)= "downVote()" type="submit">Downvote</button>
+{{downvote}}

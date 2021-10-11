@@ -19,8 +19,15 @@ public postedBy!:string;
 
     // this.event.emit(this.quotee);
   // }
+upvote:number =0
+downvote:number =0
+  upVote() {
+this.upvote+=1
+  }
 
-  
+  downVote() {
+    this.downvote+=1
+      }
 
   constructor() { }
 
