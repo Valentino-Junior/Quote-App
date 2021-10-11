@@ -19,6 +19,8 @@ public postedBy!:string;
 
     // this.event.emit(this.quotee);
   // }
+
+  //upvote and downvote functions
 upvote:number =0
 downvote:number =0
   upVote() {
@@ -29,6 +31,10 @@ this.upvote++
     this.downvote++
       }
 
+//delete function
+      deleteMain(erase:boolean) {
+this.event.emit(erase)
+      }
   constructor() { }
 
   ngOnInit(): void {

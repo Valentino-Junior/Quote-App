@@ -7,7 +7,10 @@
 
 
 
-<button (click) = "upVote()" type="submit" class="btn btn-success" style="margin-right:10px ;">Upvote</button>
+<button (click) = "upVote()" type="submit" class="btn btn-outline-success" style="margin-right:10px ;">Upvote</button>
 {{upvote}}
-<button (click)= "downVote()" type="submit" class="btn btn-danger" style="margin-right: 10px;">Downvote</button>
-{{downvote}}
+<button (click)= "downVote()" type="submit" class="btn btn-outline-danger" style="margin-right: 10px;">Downvote</button>
+{{downvote}} 
+<br><br>
+
+<button (click) = "deleteMain(true)" type="submit" class="btn btn-danger">Delete</button>

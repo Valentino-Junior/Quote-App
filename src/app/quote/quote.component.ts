@@ -31,6 +31,18 @@ export class QuoteComponent implements OnInit {
   }
 
 
+  eraseQuote(toErase:any,index:any) {
+if(toErase) {
+  let confirmErase = confirm("Are you certain you want to remove this quote?")
+if(confirmErase) {
+  this.QuoteClassess.splice(index,1)
+}
+}
+
+
+  }
+
+
   ngOnInit(): void {
   }
 
