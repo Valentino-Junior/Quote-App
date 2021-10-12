@@ -11,10 +11,10 @@ export class QuoteDetailsComponent implements OnInit {
   @Input() quoteSend!:QuoteClass; 
   @Output() event: EventEmitter<any> = new EventEmitter();
 
-  //public QuoteClasse:any;
+  
 
-  public quotee =  new QuoteClass (0, '','', '', new Date ())
- public postedDate:any = new Date
+  // public quotee =  new QuoteClass (0, '','', '', new Date ())
+ 
   // sendData() {
 
     // this.event.emit(this.quotee);
