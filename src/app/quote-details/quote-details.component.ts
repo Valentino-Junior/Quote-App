@@ -31,6 +31,12 @@ this.upvote++
     this.downvote++
       }
 
+
+//highest vote
+highestVote() {
+  
+}
+
 //delete function
       deleteMain(erase:boolean) {
 this.event.emit(erase)
